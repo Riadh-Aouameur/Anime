@@ -23,11 +23,11 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/editText2"
+        android:layout_marginEnd="25dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_border"
         android:hint="Email"
@@ -39,9 +39,9 @@
 
     <EditText
         android:id="@+id/editText1"
+        android:layout_marginEnd="25dp"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginEnd="25dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/edit_border"
@@ -53,11 +53,11 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editText3"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="25dp"
         android:background="@drawable/edit_border"
         android:hint="Phone"
@@ -65,16 +65,16 @@
         android:paddingLeft="16dp"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText1" />
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
     <EditText
         android:id="@+id/editText4"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="25dp"
         android:background="@drawable/edit_border"
         android:hint="Password"
@@ -84,7 +84,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/editText3" />
 
     <Button
         android:id="@+id/button"

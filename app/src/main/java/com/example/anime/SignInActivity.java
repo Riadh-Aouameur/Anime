@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Patterns;
 import android.view.View;
 import android.view.WindowManager;
@@ -24,7 +25,7 @@ public class SignInActivity extends AppCompatActivity {
     EditText email_ed;
     EditText password_ed;
     private FirebaseAuth mAuth;
-    DatabaseReference database;
+
 
 
     @Override
@@ -39,7 +40,7 @@ public class SignInActivity extends AppCompatActivity {
         email_ed = findViewById(R.id.editText1);
         password_ed = findViewById(R.id.editText2);
         mAuth = FirebaseAuth.getInstance();
-        //   database = FirebaseDatabase.getInstance().getReference().child("Users");
+
 
     }
 
@@ -76,7 +77,7 @@ public class SignInActivity extends AppCompatActivity {
             return;
         }
 
-        //progressBar.setVisibility(View.VISIBLE);
+
         LoadingDialog loadingDialog = new LoadingDialog(SignInActivity.this);
         loadingDialog.startLoadingDialog();
 
@@ -87,20 +88,13 @@ public class SignInActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-                    if (user.isEmailVerified()) {
-                        Toast.makeText(SignInActivity.this, "   Successful LogIn  ", Toast.LENGTH_LONG).show();
 
+                        Toast.makeText(SignInActivity.this, "   Successful LogIn  ", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(SignInActivity.this, Home_activity.class);
-//                        intent.putExtra("EMAIL",email_ed);
-//                        intent.putExtra("PASSWORD",password);
                         startActivity(intent);
 
 
-                    } else {
-                        user.sendEmailVerification();
-                        Toast.makeText(SignInActivity.this, "   Verify Your Email   ", Toast.LENGTH_LONG).show();
 
-                    }
 
                 } else {
 

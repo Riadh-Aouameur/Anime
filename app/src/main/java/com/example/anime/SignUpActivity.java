@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.annotations.NotNull;
@@ -39,8 +40,8 @@ public class SignUpActivity extends AppCompatActivity {
         getWindow().setStatusBarColor(Color.TRANSPARENT);
 
         username_ed = findViewById(R.id.editText1);
-        email_ed = findViewById(R.id.editText1);
-        phone_ed = findViewById(R.id.editText2);
+        email_ed = findViewById(R.id.editText2);
+        phone_ed = findViewById(R.id.editText3);
         password_ed = findViewById(R.id.editText4);
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance().getReference().child("Users");
@@ -114,6 +115,14 @@ public class SignUpActivity extends AppCompatActivity {
 
 
                             Toast.makeText(SignUpActivity.this, "   Successful   ", Toast.LENGTH_LONG).show();
+                            FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+                            firebaseUser.sendEmailVerification();
+
+                            Intent intent = new Intent(SignUpActivity.this,VerifyActivity.class);
+                            intent.putExtra("EMAIL",email);
+                            intent.putExtra("PASSWORD",password);
+                            startActivity(intent);
+
 
 
                         } else {

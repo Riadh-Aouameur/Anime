@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Anime">
-        <activity android:name=".Forgot_password_activity"></activity>
+        <activity android:name=".VerifyActivity"></activity>
+        <activity android:name=".LineChartActivity" />
+        <activity android:name=".RadarChartActivity" />
+        <activity android:name=".PieChartActivity" />
+        <activity android:name=".BarChartActivity" />
         <activity android:name=".Home_activity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".SignInActivity" />
+        <activity android:name=".Forgot_password_activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".SignInActivity" />
     </application>
 
 </manifest>

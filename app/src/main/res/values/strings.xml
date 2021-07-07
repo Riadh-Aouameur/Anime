@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Anime</string>
+    <string name="open">Open navigation drawer</string>
+    <string name="close">Close navigation drawer</string>
+
+    <string-array name="amine">
+        <item>KIMETSU NO YAIBA</item>
+        <item>HUNTER X HUNTER</item>
+        <item>NARUTO</item>
+        <item>ONE PIECE </item>
+        <item>DEATH NOTE</item>
+    </string-array>
+
+    <string-array name="AGE">
+        <item>+18</item>
+        <item>+18</item>
+        <item>+16</item>
+        <item>+19</item>
+        <item>+20</item>
+    </string-array>
 </resources>
